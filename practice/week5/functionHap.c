@@ -10,12 +10,14 @@ void main()
 }
 int hapf(int value) // 입력된 value 까지의 합을 계산 하는 함수
 {
-	int i;
+	int i=1;
 	int hap = 0;
 
-	for (i = 1; i <= value; i = i + 1) {
-		hap = hap + i;
+	while(i<=value){
+		i=i+1;
+		hap = hap +i;
 	}
-	// for루프를 기반으로 hap값을 결정
+	
+	// while루프를 기반으로 hap값을 결정
 	return hap; // 계산된 값을 반환한다.
 }
