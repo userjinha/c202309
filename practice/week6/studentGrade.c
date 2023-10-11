@@ -2,7 +2,7 @@
 #define STUDENTS 5
 
 void classifyStudents(int scores[], char targetGrade) {
-	printf("ÇĞ»ı ¼ºÀû ºĞ·ù:\n");
+	printf("í•™ìƒ ì„±ì  ë¶„ë¥˜:\n");
 	char grade = ' ';
 	for (int i = 0; i < STUDENTS; i++) {
 		if (scores[i] >= 90) {
@@ -21,68 +21,27 @@ void classifyStudents(int scores[], char targetGrade) {
 			grade = 'F';
 		}
 		if (targetGrade == grade) {
-			printf("%d ÇĞ»ıÀº %cÁ¡¼ö¸¦ ¹Ş¾Ò½À´Ï´Ù.", i + 1, targetGrade);
+			printf("%d í•™ìƒì€ %cì ìˆ˜ë¥¼ ë°›ì•˜ìŠµë‹ˆë‹¤.", i + 1, targetGrade);
 		}
 	}
-}
-
-int sumScores(int scores[], int sumScores ) {
-	
-	int sum = 0;
-	for (int i = 0; i < STUDENTS; i++) {
-		sum += scores[i];
-		printf("ÇĞ»ıµé Á¡¼öÀÇ ÃÑ ÇÕÀº %dÀÌ°í, ", sum);
-
-	}
-
-}
-
-double averageScores(int scores[], double average) {
-	int sum = 0;
-	int num = STUDENTS;
-	for (int i = 0; i < STUDENTS; i++) {
-		sum += scores[i];
-
-		double average;
-		average = (double)sum / (double)num;
-		printf("Æò±Õ °ªÀº %.lfÀÔ´Ï´Ù.");
-
-	}
-
-}
-
-void printRanks(int scores[]) {
-	for (int i = 1; i < STUDENTS; i++) {
-		printf("%d ÇĞ»ıÀÇ ¼øÀ§´Â ", i);
-		
-		for(int j=0; j)
-	}
-	
-
-
 }
 
 int main() {
 	int scores[STUDENTS];
 
 	for (int i = 0; i < STUDENTS; i++) {
-		printf("ÇĞ»ı %dÀÇ ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä: ", i + 1);
-		scanf_s("%d", &scores[i]);
+		printf("í•™ìƒ %dì˜ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”: ", i + 1);
+		scanf_S("%c", &scores, 1);
 	}
 
-	char ch = getchar(); //¹öÆÛ ÀÓ½Ã ÀúÀå º¯¼ö. ¿£ÅÍ Áö¿ì±â À§ÇØ
+	char ch = getchar();
 
 	char target;
-	printf("Æ¯Á¤ Á¡¼ö(A, B, C, D, F)¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
-	scanf_S("%c", &target, 1);
+	printf("íŠ¹ì • ì ìˆ˜ (A, B, C, D, F)ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
+	scanf_s("%c", &target, 1);
 
-	classifystudents(scores, target);
-
-	int sum = sumScores(scores);
-	double average = averageScores(scores);
-	pirntf("ÇĞ»ıµé Á¡¼öÀÇ ÃÑ ÇÕÀº %d ÀÌ°í, Æò±Õ °ªÀº %lfÀÔ´Ï´Ù.\n", sum, average);
-
-	printfRanks(scores);
+	classifyStudents(scores, target);
 
 	return 0;
 }
+
