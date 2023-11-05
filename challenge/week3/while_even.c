@@ -16,6 +16,6 @@ int main(void) {
 		}
 		// if 문을 사용하여 i가 짝수인지 확인, 만약 i가 짝수이면 continue 문을 사용하여 루프의 다음 반복으로 넘어감
 		printf("Hello World %d \n", i);
-		hello world 메시지를  출력하고 현재의 i 값을 출력, 이 부분은 홀수인 i에 대해서만 실행됨
+		// hello world 메시지를  출력하고 현재의 i 값을 출력, 이 부분은 홀수인 i에 대해서만 실행됨
 	}
 }
