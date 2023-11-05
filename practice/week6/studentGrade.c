@@ -33,15 +33,14 @@ int main() {
 
     for (int i = 0; i < STUDENTS; i++) {
         printf("학생 %d의 성적을 입력하세요: ", i + 1);
-        scanf("%d", &scores[i]); // for루프를 사용하여 학생의 성적을  입력받음
-    } 
+        scanf_s("%d", &scores[i]); // for루프를 사용하여 학생의 성적을  입력받음
+    }
 
     char target; // 사용자로부터 특정 학점을 입력받을때, 이 변수 사용
     printf("특정 학점 (A, B, C, D, F)를 입력하시오: ");
-    scanf(" %c", &target); // 공백 문자를 추가하여 이전 입력의 엔터 키를 처리합니다
+    scanf_s(" %c", &target); // 공백 문자를 추가하여 이전 입력의 엔터 키를 처리합니다
 
     classifyStudents(scores, target); // 함수 호출
 
     return 0;
 }
-
